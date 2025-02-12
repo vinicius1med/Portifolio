@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/ex6.css">
+</head>
+<body>
+    <h1>User Authentication System</h1>
+
+    <div class="container">
+        <h2>Python Code:</h2>
+        <pre>
+class User:
+    def __init__(self, name, email, password, age, phone):
+        self.__name = name
+        self.__email = email
+        self.__password = password
+        self.__age = age
+        self.__phone = phone
+
+    def get_email(self):
+        return self.__email
+
+    def get_password(self):
+        return self.__password
+
+    def get_name(self):
+        return self.__name
+
+registered_users = [
+    User("Vinícius", "vinicius@email.com", "1234", 25, "99999-9999"),
+    User("Maria", "maria@email.com", "abcd", 30, "88888-8888")
+]
+
+session = {}
+
+def authenticate(email, password):
+    for user in registered_users:
+        if user.get_email() == email and user.get_password() == password:
+            session['authenticated_user'] = user.get_name()
+            return f"Welcome, {user.get_name()}!"
+    return "Invalid email or password."
+        </pre>
+    </div>
+
+    <a class="btn" href="/lista_06_11/ex1_lista_06_11">Back</a>
+</body>
+</html>

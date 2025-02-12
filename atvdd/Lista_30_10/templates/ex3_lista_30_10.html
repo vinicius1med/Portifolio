@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+    <link rel="stylesheet" href="./static/css/ex3.css">
+</head>
+<body>
+    <div class="header-container">
+        <h1>List of Records</h1>
+        <a href="/lista_30_10/home_lista_30_10" class="btn">Back to Home</a>
+    </div>
+    <div class="table">
+        <div class="row header">
+            <div class="cell">ID</div>
+            <div class="cell">Name</div>
+            <div class="cell">Surname</div>
+            <div class="cell">Email</div>
+            <div class="cell">Actions</div>
+        </div>
+        {% for record in data %}
+        <div class="row">
+            <div class="cell">{{ record.id }}</div>
+            <div class="cell">{{ record.name }}</div>
+            <div class="cell">{{ record.surname }}</div>
+            <div class="cell">{{ record.email }}</div>
+            <div class="cell">
+                <button onclick="alert('Action on record {{ record.id }}')">Action</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

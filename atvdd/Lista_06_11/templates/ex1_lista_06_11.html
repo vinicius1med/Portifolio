@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <link rel="stylesheet" href="{{ url_for('lista_06_11.static', filename='css/ex1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <h1>Login - example (Exercises 1, 2 and 3)</h1>
+            <div class="login_input">User: <input type="text" id="user"></div>
+            <div class="login_input">Password:<input type="password" id="key"></div>
+            <button id="button">Send</button>
+            <div id="response"></div>
+            <p>correct for test user: user123 and password: key123 / Obs.: if login is correct, the app will show the exercices 4 and 5.
+            </p>
+            <p></p>
+        </div>
+        <a class="btn" href="/lista_06_11/ex6_lista_06_11">Exercice 6</a>
+        <a class="btn" href="/">Back to portifolio</a>
+    </div>
+    <script src="{{ url_for('lista_06_11.static', filename='js/ex1.js') }}"></script>
+</body>
+</html>

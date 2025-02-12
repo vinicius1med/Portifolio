@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <h2>Frameworks para Desenvolvimento Web - IFMS 2025</h2>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="container-content">
+
+              <div class="content-profile">
+                <div class="description">
+                  <div class="name"><p>Vinícius Medina</p></div>
+                  <div class="text-description">
+                    <div>
+                      <p>Prazer em vê-lo por aqui. Bem, meu nome você já sabe. Tenho 20 anos e sou estudante de Análise e Desenvolvimento de Sistemas. Este é o projeto em que venho trabalhando: a construção de um portfólio para apresentar todas as atividades e conteúdos que tive durante a unidade curricular de Frameworks Web. A seguir, você pode me encontrar nas redes sociais para continuar acompanhando meu trabalho e minhas evoluções enquanto programador. Obrigado e até logo! ;)
+                      </p>
+                    </div>
+                    <div>
+                      <a href="https://github.com/vinicius1med">GitHub</a>
+                      <a href="www.linkedin.com/in/viníciusmedina">LinkedIn</a>
+                    </div>     
+                  </div>
+                </div>
+                <div class="profile-picture">
+                  <div>
+                    <img src="/static/img/me2.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-main">
+                <div class="presentation">
+                  <h3>FRAMEWORKS DESENVOLVIMENTO WEB</h3>
+                  <p>Esta será a primeira disciplina onde iremos aprender a manipular um framework para
+                    desenvolvimento web. Foi escolhido Flask para aprendizagem por já ter conteúdo e
+                    documentação de fácil acesso, além de ser um framework relativamente atual e que utiliza
+                    python em seu conceito. O python hoje em dia e considerado uma das melhores linguagens
+                    para se fazer conexões com APIs, IAs e outros. Teremos também uma breve introdução ao
+                    ORM - Mapeamento de Objeto Relacional: SQLAlchemy. <br><br> Esta disciplina foi ministrada pelo professor Alex Araujo.
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULA 01 (09/10) APRESENTAÇÃO DA DISCIPLINA + AVALIAÇÕES:</h3>
+                  <p>
+                    AV1. Programação ao vivo (tema entregue 24h antes) - (11 e 18/12) (data modificada
+                    posteriormente) <br>
+                    AV2. Entrega de um portifólio montado das atividades desenvolvidas durante aula (12/02) <br>
+                    AV3. Aplicação prática com requisitos (22/01): desenvolvimento de uma aplicação open
+                    source com, pelo menos uma API desenvolvida; ao menos um endpoint documentado com
+                    períodos de entrada e saída; código limpo; deve ser funcional; validações nas entradas de
+                    dados; BONUS caso seja uma aplicação elástica ou escalável; deve conter a integração com
+                    um banco de dados; o professor irá realizar os testes na entrega seguindo a nossa
+                    documentação do projeto (tutorial de uso/instalação). <br><br>
+                    Para aulas seguintes: <br>
+                    - Criar um ambiente virtual do python com VENV; <br>
+                    - Saber instalar pacotes no Python (para usar durante as aulas com o pip); <br>
+                    - Requirements - arquivo de dependências para replicar o ambiente virtual. É um arquivo
+                    TXT que vem com as dependências que usamos + a versão (semelhante ao packet json); <br>
+                    - Importante! Usaremos somente Linux para desenvolver durante a disciplina! <br><br>
+                    Boa prática de programação: <br>
+                    - Nunca armazenar nada dentro do ambiente virtual
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULA 02 (16/10) TRABALHOS:</h3>
+                  <p>
+                    Nesta aula foram definidos os temas para desenvolvimento dos trabalhos: <br>
+                    - 1 Sistema de chamada por câmera <br>
+                    - 2 Análise de emoções em imagem <br>
+                    - 3 Scanner para documento
+                    PDF
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULA 03 (23/10) AMBINETE VIRTUAL EM PYTHON: </h3>
+                  <p>
+                    Criando o ambiente dentro do terminal: <br>
+                    <pre><code>> python -m venv nome_do_ambiente</code></pre> <br>
+    
+                    Para ativar o ambiente: 
+                    <pre><code>> nome_do_ambiente\Scripts\activate (para Windows)</code></pre> 
+                    <pre><code>> source nome_do_ambiente/bin/activate (para Linux)</code></pre>  <br>
+
+                    Para desativar: 
+                    <pre><code>> deactivate</code></pre>  <br>
+
+                    Instalar depedencias no python:
+                    <pre><code>> pip install nome_pacote</code></pre>
+                    <pre><code>> pip list (lista os pacotes para conferir se o pacote foi realmente instalado)</code></pre> <br>
+
+                    -> pypi – onde buscar por pacotes e com instalar
+                    no python. <br><br>
+                    
+                    Nesta aula instalamos: flask, flask sqlalchemy e numpy. <br><br>
+                    Comportamento do framework flask: roteamento de páginas. Estrutura: templates (pasta
+                    que armazena os HTML), static (pasta de arquivos estáticos, css, imagens, javascript...) e
+                    app.py (arquivo principal, onde irá conter as rotas). <br><br>
+                    Observação para as próximas aulas: irão começar com uma lista de atividades e depois
+                    explicação dos conceitos que vamos utilizar pra fazer essas atividades. <br><br>
+                    Boa prática de programação: <br>
+                    - Instalamos bibliotecas sempre dentro do ambiente virtual <br>
+                    - Uso do inglês em código: classes, variáveis, nomes de arquivos... <br>
+                    - Variáveis em snake_case (padrão do python) <br>
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULA 04 (30/10) DESENVOLVENDO:</h3>
+                  <p>
+                    Importação:
+                    <pre><code>from flask import Flask</code></pre> <br>
+                    
+                    - Requisições web trabalham com request and response <br>
+                    - No ambiente web as requisições são reativas pois só fazem algo se alguém pede. O flask
+                    permite com que o código python fique escutando e esperando uma requisição. <br>
+                    - requisição -> flask -> python -> devolve a requisição <br><br>
+                    Importante: <br>
+                    <pre><code>app.run(debug=True)
+#atualiza automaticamente o servidor</code></pre>
+                    <pre><code>app.run(debug=True, port 'xxxx')
+#muda a porta em que a aplicação está rodando </code></pre>
+                    <pre><code>(debug=True, port 'xxxx', host = '0.0.0.0)
+#para disponibilizar a aplicação para todo mundo que estiver conectado na mesma rede que eu (app.run)</code></pre> <br>
+                    
+                    -> Para a aplicação ser reativa, criamos as rotas, mas para isso, nós precisamos ter alguma
+                    função (dessa forma que se cria as “páginas”)
+                    <pre><code>@app.route(‘/rota_desejada’)
+              def contact():
+                    return 'Hello World'</code></pre> <br>
+
+                    Criamos a nossa primeira aplicação app.py e criamos algumas páginas. <br><br>
+                    LISTA DE ATIVIDADES: <br>
+                    Ex1. Crie uma rota para uma página web com a tag canvas que permite ao usuário deslocar
+                    uma fotografia para a direita e esquerda com as setinhas do teclado. <br>
+                    Ex2. Crie uma rota para a atividade 2 que permita ao usuário capturar uma fotografia pela
+                    webcam e mostrar na tela. <br>
+                    Ex3. Crie uma rota para a atividade 3 com python app que exiba uma tabela (sem usar
+                    table) com 997 linhas e 5 colunas: nas colunas id, nome, sobrenome, e-mail, ações. <br>
+                    Ex4. Crie uma rota com 3 links, um para cada uma das atividades anteriores, porém todas
+                    elas bonitas. <br>
+                    Ex5. Crie 6 rotas, sendo cada uma estilizada, bonita e etc. Sendo que em cada rota deve
+                    conter o currículo de um integrante do grupo.
+                  </p>
+                  <a href="/class_04_exercices">Exercicios 1 a 5</a> <br>
+                  <a href="https://github.com/vinicius1med/Portifolio">(Para acessar o codigo das atividades acesse meu github)</a>
+                </div>
+                <div class="class">
+                  <h3>AULA 05 (06/11) PARAMETROS: </h3>
+                  <p>
+                    Nesta aula revizamos os conceitos de render_template.
+                    <pre><code>@app.route("/")  
+            def home():
+                return render_template("home.html")</code></pre> <br>
+                    Deve renderizar meu arquivo html localizado obrigatoriamente na raiz da pasta templates. <br><br>
+                    LISTA DE ATIVIDADES: <br>
+                    Ex1. Considerando um usuário e uma senha mocados (dados fictícios) faça uma página de
+                    autenticação que retorne uma mensagem caso a autenticação funcione (bom dia, tarde,
+                    noite a depender do horário), se não, diz que o login não bateu. <br>
+                    Ex2. Limite as tentativas de autenticação do usuário em 2x, se ele errar duas vezes, tire a
+                    opção de login e exiba uma mensagem de erro. <br>
+                    Ex3. Estilizar de forma bonita a página de identificação. <br>
+                    Ex4. Escreva um script python que gere automaticamente um template HTML contendo
+                    um formulário para input de dados com os campos que serão recebidos por JSON (gerar o
+                    .html e o formulário, a outra parte do código recebe os dados em JSON, trata ele e devolve
+                    como uma lista de strings). <br>
+                    Ex5. Incremente no script do exercicio 4: após gerar o template, ele construa
+                    automaticamente uma rota que permita visualiza-lo. <br>
+                    Ex6. Crie uma classe em python que encapsule dados de usuário entre 5 e 6 campos, e
+                    desenvolva uma função de autenticação (validar dados, criar uma sessão para guardar e
+                    autenticar). <br><br>
+                    Utilizamos o tempo de aula para desenvolver as atividades em sala e também realizamos o
+                    experimento de tentar conectar nosso código com um colega.
+                  </p>
+                  <a href="/class_05_exercices">Exercicios 1 a 6</a> <br>
+                  <a href="https://github.com/vinicius1med/Portifolio">(Para acessar o codigo das atividades acesse meu github)</a>
+                </div>
+                <div class="class">
+                  <h3>AULA 06 (13/11) REGRAS BÁSICAS PARA DESENVOLVIMENTO:</h3>
+                  <p>
+                    (o método padrão de toda rota sempre e GET) <br><br>
+                    1. Não confie nos dados que chegam da requisição: devemos validar todos os dados, essa
+                    validação depende do que se espera de cada tipo de dado (ex: texto, número, etc). <br>
+                    2. Garantir integridade e consistência dos dados: o que você recebeu vai servir pra calcular
+                    o que precisa; armazenar para que seja possível recuperar se necessário; uso de
+                    armazenamento persistente para preservar esses dados pois a persistência garante a
+                    durabilidade e persistência. <br>
+                    3. Trabalho em meio assíncrono ou síncrono: se for de forma síncrona, você deve devolver
+                    a resposta em tempo hábil, geralmente em desenvolvimento web, se usa sempre a forma
+                    síncrona. <br>
+                    4. Tratar exceções: nunca deixe o backend morrer quebrar. <br><br>
+                    Observação: em python validamos coisas através de estrutura de seleção (o que
+                    conhecemos como estruturas condicionais, porém não podemos chamar de condicional
+                    pois essas estruturas serão usadas para selecionar) <br><br>
+                    Sugestão de banco de dados para uso: SQLite <br><br>
+                    TERCEIRA LISTA DE ATIVIDADES: <br>
+                    - Criar um formulário com os campos: nome e senha + botão autenticar. Retornar uma
+                    mensagem para ver se está funcionando. Criar uma segunda rota para renderizar o
+                    conteúdo armazenado do formulário. <br>
+                    -> deixar os dados do usuário mocados para fazer essa validação para a próxima aula <- <br>
+                    Ex1. Fazer todas as validações possíveis para garantir que as informações foram enviadas corretamente pelo usuário. <br> 
+                    Ex2. Tratar exceções para evitar que seja exibida a mensagem de erro padrão. <br>
+                    Ex3. Garantir que o usuário seja redirecionado com a possibilidade de fazer a autenticação novamente quando um dos dados estiverem incorretos. <br>
+                    Ex4. Limitar em duas tentativas de autenticação errada. <br>
+                    Ex5. Alterar todos os retornos usando dados formatados em json (conjunto chave: valor)
+                  </p>
+                  <a href="/class_06_exercices">Exercicios 1 a 5</a> <br>
+                  <a href="https://github.com/vinicius1med/Portifolio">(Para acessar o codigo das atividades acesse meu github)</a>
+                </div>
+                <div class="class">
+                  <h3>AULA 07 (20/11) ATIVIDADES E PROJETO FINAL:</h3>
+                  <p>
+                    Utilizamos o tempo de aula para desenvolver atividades e pendencias.
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULA 08 (27/11) APRESENTAÇÃO DOS PROTÓTIPOS - PROJETO FINAL:</h3>
+                  <p>
+                    Alguns grupos apresentaram protótipos e objetivos do projeto final. 
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULA 09 (04/12) ATIVIDADES E PROJETO FINAL: </h3>
+                  <p>
+                    Utilizamos o tempo de aula para desenvolver atividades e pendencias.
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULA 10 (11/12) DETALHAMENTO DA PROVA AO VIVO: </h3>
+                  <p>
+                    Foi definido como funcionaria a distribuição das provas.
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULA 11 (18/12) O QUE PRATICAR ANTES DA PROVA: </h3>
+                  <p>
+                    (Durante a prova será proibido usar Internet) <br><br>
+                    1. Mini-blog Pessoal - <br>
+                    - Objetivo da atividade: <br>
+                    Criar uma aplicação simples para postar pequenos textos com data e hora. <br>
+                    - Funcionalidades: Formulário para adicionar novos posts; Lista de posts na página inicial,
+                    ordenados por data. <br>
+                    Utilização de templates para formatar a página. <br> 
+                    Dicas: <br>
+                    - Utilizar lista em Python para armazenar os posts. <br>
+                    - Usar o módulo datetime para registrar a data e hora de cada post. <br>
+                    - Criar um template básico com HTML e CSS para estilizar a página. <br><br>
+                    2. Página de autenticação básica - <br>
+                    Objetivo da atividade: <br>
+                    Criar uma aplicação simples para comparar se o usuário e a senha digitados estão corretos. <br>
+                    Funcionalidades: <br>
+                    - Formulário para informar usuário e senha. <br>
+                    - Dicionário para armazenar o usuário e senha cadastrados. <br>
+                    - Utilização de templates para formatar a página. <br>
+                    - Retornar mensagens de sucesso ou falha na autenticação. <br>
+                    Dicas: <br>
+                    - Utilizar lista para armazenar as tentativas de autenticação. <br>
+                    - Usar o módulo datetime para registrar a data e hora de login. <br>
+                    - Criar um template básico com HTML e CSS para estilizar a página. <br><br>
+                    3. Página de upload de fotos - <br>
+                    Objetivo da atividade: <br>
+                    Criar uma aplicação simples para fazer upload de imagens. <br>
+                    Funcionalidades: <br>
+                    - Formulário para escolher o arquivo a partir do computador do usuário. <br>
+                    - Armazenar os arquivos enviados pelos usuários em uma pasta. <br>
+                    - Utilização de templates para formatar a página. <br>
+                    - Retornar mensagens de sucesso ou falha na autenticação. Em caso de sucesso, deve-se
+                    retornar também o path de onde o arquivo foi armazenado no servidor. <br>
+                    Dicas: <br>
+                    - Utilizar lista para armazenar os arquivos enviados. <br>
+                    - Usar o módulo datetime para registrar a data e hora do upload do arquivo. <br>
+                    - Criar um template básico com HTML e CSS para estilizar a página. <br><br>
+                    Especificações da prova -
+                    Tempo: 30 minutos. Tempo não é longo, portanto, o foco deve ser em funcionalidades
+                    básicas. <br><br>
+                    Aprendizado: O objetivo principal é praticar os conceitos aprendidos e explorar novas
+                    possibilidades com o Flask. <br><br>
+                    Ferramentas: Recomenda-se utilizar um editor de código com suporte ao Python e Flask,
+                    como o Visual Studio Code.
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULAS 12, 13 E 14 (8, 15, 22/01) APLICAÇÃO DA PROVA AO VIVO:</h3>
+                  <p>
+                    Durantes estes dias o professor dividiu a turma em dois grupos para realizarem a prova. O
+                    primeiro grupo realizou a prova no dia 08/01 e o segundo grupo no dia 27/01.
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULA 15 (29/01) FEEDBACK SOBRE A PROVA:</h3>
+                  <p>
+                    Durante a aula o professor devolveu o feedback e as notas de toda a turma e discutiu duvidas
+                    relacionadas a alguns tópicos avaliados durante a prova.
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULA 16 (05/02) ATIVIDADES E PORTIFÓLIO: </h3>
+                  <p>
+                    Utilizamos o tempo de aula para desenvolver atividades e pendencias.
+                  </p>
+                </div>
+                <div class="class">
+                  <h3>AULA 17 (12/02) ENTREGAS:</h3>
+                  <p>
+                    Finalização do projeto e entrega do portifólio.
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Hi &copy; 2024/2025</p>
+    </footer>
+</body>
+</html>
